@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Hello from "./components/Hello.jsx"
+import Fruits from "./components/Fruits.jsx"
+import Message from "./components/Message.jsx"
+import Counter from "./components/Counter.jsx"
+import Form from "./components/Form.jsx"
 function App() {
+    const personInfo ={
+        name :"Rob",
+        message:"hi",
+        emoji: ":)"
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Hello person = {personInfo}/>
+        <Fruits/>
+        <Message/>
+        <Counter/>
+        <Form/>
     </div>
   );
 }
-
 export default App;
